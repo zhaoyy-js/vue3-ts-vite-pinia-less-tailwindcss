@@ -74,6 +74,20 @@ const routes: Array<RouteRecordRaw | any> = [
       name: "动态组件",
     },
   },
+  {
+    path: "/slot",
+    component: () => import("../views/slot/index.vue"),
+    meta: {
+      name: "插槽",
+    },
+  },
+  {
+    path: "/provide",
+    component: () => import("../views/provide/index.vue"),
+    meta: {
+      name: "Provide/Inject",
+    },
+  },
 ];
 
 export { routes };

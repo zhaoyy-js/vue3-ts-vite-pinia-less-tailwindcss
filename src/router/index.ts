@@ -67,6 +67,13 @@ const routes: Array<RouteRecordRaw | any> = [
       name: "全局组件注册",
     },
   },
+  {
+    path: "/com",
+    component: () => import("../views/com/index.vue"),
+    meta: {
+      name: "动态组件",
+    },
+  },
 ];
 
 export { routes };

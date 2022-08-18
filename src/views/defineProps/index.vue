@@ -11,13 +11,13 @@
       {{ parData }}
     </div>
 
-    <div>{{ $log(parDataFlag) }}</div>
+    <!-- <div>{{ $log(parDataFlag) }}</div> -->
   </div>
 </template>
 
 <script setup lang="ts">
 import subcom from "@/components/subcomponent/index.vue";
-import { reactive, computed } from "vue";
+import { ref, reactive, computed, onMounted } from "vue";
 
 type Data = {
   id: number;
@@ -48,6 +48,7 @@ const emitSon = (data: Object) => {
 const parDataFlag = computed(() => {
   return Object.keys(parData).length > 0 ? true : false;
 });
+
 </script>
 
 <style lang="less" scoped></style>

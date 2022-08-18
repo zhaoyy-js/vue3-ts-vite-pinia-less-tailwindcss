@@ -60,6 +60,13 @@ const routes: Array<RouteRecordRaw | any> = [
       name: "父子传值",
     },
   },
+  {
+    path: "/zybtn",
+    component: () => import("../views/zybtn/index.vue"),
+    meta: {
+      name: "全局组件注册",
+    },
+  },
 ];
 
 export { routes };

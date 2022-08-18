@@ -13,10 +13,24 @@ interface Data {
   id: number;
   name: string;
 }
-defineProps<{
-  title: string;
-  data: Array<Data>;
-}>();
+// defineProps<{
+//   title: string;
+//   data: Array<Data>;
+// }>();
+
+type Props = {
+  title?: string;
+  data?: Array<Data>;
+};
+withDefaults(defineProps<Props>(), {
+  title: "张三",
+  data: () => [
+    {
+      id: 0,
+      name: "html",
+    },
+  ],
+});
 
 let sonData = {
   id: 0,

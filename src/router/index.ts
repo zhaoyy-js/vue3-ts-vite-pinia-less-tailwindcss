@@ -95,6 +95,13 @@ const routes: Array<RouteRecordRaw | any> = [
       name: "mitt/跨组件传递数据",
     },
   },
+  {
+    path: "/store",
+    component: () => import("../views/store/index.vue"),
+    meta: {
+      name: "store/跨组件传递数据",
+    },
+  },
 ];
 
 export { routes };

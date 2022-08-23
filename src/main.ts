@@ -8,6 +8,9 @@ import "./style.css";
 import "./index.css";
 import mitt from "mitt";
 const Mit = mitt();
+import { createPinia } from "pinia";
+const store = createPinia();
+
 //TypeScript注册
 // 由于必须要拓展ComponentCustomProperties类型才能获得类型提示
 declare module "vue" {
@@ -22,5 +25,6 @@ app.config.globalProperties.$Bus = Mit;
 app.config.globalProperties.$log = window.console.log;
 app.use(ElementPlus);
 app.use(router);
+app.use(store);
 app.component("zyBtn", zybtn);
 app.mount("#app");

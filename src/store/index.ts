@@ -1,7 +1,12 @@
 import { defineStore } from "pinia";
 import { Names } from "./store-namespace";
 
-const data = [
+interface Data {
+  id: number;
+  name: string;
+}
+
+const data: Array<Data> = [
   {
     id: 0,
     name: "html",
@@ -48,7 +53,7 @@ export const useTestStore = defineStore(Names.Test, {
     async setData() {
       try {
         const res = await dataTwo();
-        this.data = res as any;
+        this.data = res as Array<Data>;
       } catch (error) {
         console.error(`error:${error}`);
       }

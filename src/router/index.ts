@@ -88,6 +88,13 @@ const routes: Array<RouteRecordRaw | any> = [
       name: "Provide/Inject",
     },
   },
+  {
+    path: "/mitt",
+    component: () => import("../views/mitt/index.vue"),
+    meta: {
+      name: "mitt/跨组件传递数据",
+    },
+  },
 ];
 
 export { routes };
